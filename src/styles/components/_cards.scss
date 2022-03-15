@@ -1,0 +1,33 @@
+@media screen and (min-width: 375px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    height: 255px;
+    margin-bottom: 30px;
+
+    .cover {
+      width: 90%;
+      height: 255px;
+      margin: 10px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #1fe0, black);
+      object-fit: cover;
+    }
+
+    .title {
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+      margin-top: -75px;
+      margin-left: 10px;
+      padding-left: 20px;
+      white-space: normal;
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@media screen and (min-width: 375px) {
+  .notFound {
+    p {
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: center;
+      padding: 20px;
+      padding-top: 0px;
+      margin: 0px;
+    }
+    .retourAccueil {
+      text-align: center;
+      align-self: flex-end;
+      margin-top: 150px;
+      text-decoration: underline;
+    }
+    .Oups {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    .E404 {
+      font-family: Montserrat;
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 137px;
+      letter-spacing: 0em;
+      text-align: center;
+      margin-bottom: 0px;
+    }
+  }
+}
