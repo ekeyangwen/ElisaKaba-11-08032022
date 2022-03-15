@@ -1,11 +1,13 @@
 import React from "react";
-import Cards from "../components/Cards";
+import FicheLogement from "../components/FicheLogement";
 import Header from "../components/Header";
-const Logement = ({ logement }) => {
+
+const Logement = () => {
   return (
     <div className="ficheLogement">
       <Header />
-      <Cards />
+      <FicheLogement />
+      <h1 className="hello">HELLO</h1>
     </div>
   );
 };

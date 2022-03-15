@@ -1,6 +1,6 @@
 import React from "react";
 
-const Carrousel = ({ logement }) => {
+const Carrousel = () => {
   return <div className="caroussel"></div>;
 };
 
