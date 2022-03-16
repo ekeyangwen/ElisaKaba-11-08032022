@@ -2,17 +2,13 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import Cards from "./Cards.js";
+import Stars from "./Stars.js";
 
 const RecupData = () => {
   const [data, setData] = useState([]);
 
   const getData = () => {
-    fetch("data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    fetch("data.json")
       .then(function (response) {
         console.log(response);
         return response.json();

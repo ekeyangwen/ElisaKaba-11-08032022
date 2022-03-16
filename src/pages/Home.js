@@ -1,14 +1,12 @@
 import React from "react";
-import Header from "../components/Header.js";
 import Slogan from "../components/Slogan.js";
-import RecupData from "../components/RecupData";
+import Gallery from "../components/Gallery";
 
 const Home = () => {
   return (
     <div className="home">
-      <Header />
       <Slogan />
-      <RecupData />
+      <Gallery />
     </div>
   );
 };

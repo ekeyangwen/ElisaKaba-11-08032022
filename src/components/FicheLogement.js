@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import Stars from "./Stars";
 
 const FicheLogement = () => {
   const { title } = useParams();
@@ -24,18 +25,17 @@ const FicheLogement = () => {
 
   return (
     <div className="logement">
-      {eachCard &&
-        eachCard.length > 0 &&
-        eachCard.map((logement) => (
-          <div key={logement.id} logement={logement} />
-        ))}
       <section className="ficheLogement">
         <div className="unLogement">
           {eachCard
             .filter((logement) => logement.id === title)
             .map((logement, id) => (
               <div key={id} className="logementInfo">
-                <h1 className="tilte">{logement.title}</h1>
+                <h1 className="tilte">
+                  {logement.title}
+                  <p className="location">{logement.location}</p>
+                  <Stars />
+                </h1>
               </div>
             ))}
         </div>
