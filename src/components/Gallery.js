@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import Cards from "./Cards.js";
-import Stars from "./Stars.js";
 
 const RecupData = () => {
   const [data, setData] = useState([]);
