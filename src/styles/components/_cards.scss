@@ -10,8 +10,8 @@
       height: 255px;
       margin: 10px;
       border-radius: 10px;
-      background: linear-gradient(180deg, #1fe0, black);
       object-fit: cover;
+      filter: brightness(0.7);
     }
 
     .title {
@@ -28,6 +28,7 @@
       padding-left: 20px;
       white-space: normal;
       width: 80%;
+      position: absolute;
     }
   }
 }
