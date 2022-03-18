@@ -1,10 +1,10 @@
 import React from "react";
-import FicheLogement from "../components/FicheLogement";
+import LogementGallery from "../components/LogementGallery";
 
 const Logement = () => {
   return (
     <div className="ficheLogement">
-      <FicheLogement />
+      <LogementGallery />
     </div>
   );
 };

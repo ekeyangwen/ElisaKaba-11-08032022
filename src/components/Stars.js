@@ -1,17 +1,13 @@
 import React from "react";
-import { Rating } from "react-simple-star-rating";
-import { useState } from "react";
 
-const Stars = () => {
-  // let nbRating = parseInt(logement.rating);
-  const [rating, setRating] = useState(100);
+const Stars = ({ logement }) => {
+  const { rating } = logement;
+  let nbRating = parseInt(rating);
+  console.log(nbRating);
 
-  const handleRating = (rate) => {
-    setRating(rate);
-  };
   return (
     <div className="rates">
-      <Rating onClick={handleRating} ratingValue={rating} />
+      <span className="stars">{rating}</span>
     </div>
   );
 };
