@@ -33,11 +33,7 @@ const LogementGallery = () => {
               {logement.title}
               <p className="location">{logement.location}</p>
               <div className="stars">
-                {eachCard &&
-                  eachCard.length > 0 &&
-                  eachCard.map((logement) => (
-                    <Stars key={logement.id} logement={logement} />
-                  ))}
+                <Stars key={id} logement={logement} />
               </div>
             </h1>
           </div>
