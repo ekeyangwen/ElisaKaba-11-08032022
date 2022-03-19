@@ -1,13 +1,21 @@
 import React from "react";
+import { useState } from "react";
+import { Rating } from "react-simple-star-rating";
 
 const Stars = ({ logement }) => {
   const { rating } = logement;
   let nbRating = parseInt(rating);
-  console.log(nbRating);
+  let nbRatingX = nbRating * 20;
+
+  const [rates, setRates] = useState(nbRatingX);
+
+  const handleRating = (rate) => {
+    setRates(rate);
+  };
 
   return (
-    <div className="rates">
-      <span className="stars">{rating}</span>
+    <div className="App">
+      <Rating onClick={handleRating} readonly ratingValue={rates} />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import Stars from "./Stars";
+import Carrousel from "./Carrousel";
 
 const LogementGallery = () => {
   const { id } = useParams();
@@ -24,18 +25,23 @@ const LogementGallery = () => {
   }, []);
 
   return (
-    <div className="unLogement">
+    <div key={id} className="unLogement">
       {eachCard
         .filter((logement) => logement.id === id)
-        .map((logement, id) => (
-          <div key={id} className="logementInfo">
-            <h1 className="title">
-              {logement.title}
+        .map((logement, pictures) => (
+          <div>
+            <div className="carousel">
+              {logement.pictures.map((pictures) => (
+                <Carrousel pictures={pictures}></Carrousel>
+              ))}
+            </div>
+            <div className="infoLogement">
+              <h1 className="title">{logement.title} </h1>
               <p className="location">{logement.location}</p>
               <div className="stars">
-                <Stars key={id} logement={logement} />
+                <Stars logement={logement} />
               </div>
-            </h1>
+            </div>
           </div>
         ))}
       ;
