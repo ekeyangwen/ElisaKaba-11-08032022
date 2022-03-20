@@ -31,9 +31,7 @@ const LogementGallery = () => {
         .map((logement, pictures) => (
           <div>
             <div className="carousel">
-              {logement.pictures.map((pictures) => (
-                <Carrousel pictures={pictures}></Carrousel>
-              ))}
+              <Carrousel pictures={logement.pictures} />
             </div>
             <div className="infoLogement">
               <h1 className="title">{logement.title} </h1>
