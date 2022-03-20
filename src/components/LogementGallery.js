@@ -42,7 +42,6 @@ const LogementGallery = () => {
             </div>
           </div>
         ))}
-      ;
     </div>
   );
 };
