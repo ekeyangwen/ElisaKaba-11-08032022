@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Carrousel = ({ pictures }) => {
   console.log(pictures);
@@ -10,12 +11,15 @@ const Carrousel = ({ pictures }) => {
       showArrows={true}
       onChange={true}
       onClickItem={true}
+      showIndicators={false}
+      infiniteLoop={true}
     >
-      <div>
-        {pictures.map((picture) => (
+      {pictures.map((picture) => (
+        <div>
+          {" "}
           <img className="eachImg" src={picture} alt="Gallery"></img>
-        ))}
-      </div>
+        </div>
+      ))}
     </Carousel>
   );
 };

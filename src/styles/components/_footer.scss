@@ -1,0 +1,25 @@
+@media screen and (min-width: 375px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 209px;
+    width: 375px;
+    left: 947px;
+    top: 4333px;
+    border-radius: 0px;
+
+    .logo {
+      height: 39.444419860839844px;
+      width: 122px;
+      left: 659px;
+      top: 66px;
+      border-radius: 0px;
+    }
+    p {
+      color: #fff;
+    }
+  }
+}

@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 
-const Stars = ({ logement }) => {
-  const { rating } = logement;
+const Stars = ({ rating }) => {
   let nbRating = parseInt(rating);
   let nbRatingX = nbRating * 20;
 

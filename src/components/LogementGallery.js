@@ -37,7 +37,7 @@ const LogementGallery = () => {
               <h1 className="title">{logement.title} </h1>
               <p className="location">{logement.location}</p>
               <div className="stars">
-                <Stars logement={logement} />
+                <Stars rating={logement.rating} />
               </div>
             </div>
           </div>
