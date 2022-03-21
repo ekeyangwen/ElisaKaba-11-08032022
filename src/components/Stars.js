@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 const Stars = ({ logement }) => {
   const greyStars = "../../../img/Vector-star-grey.png";
   const redStars = "../../../img/Vector-star.png";
