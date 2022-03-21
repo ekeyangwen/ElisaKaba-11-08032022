@@ -3,4 +3,21 @@
     display: flex;
     flex-direction: column;
   }
+  .unLogement {
+    margin-left: 20px;
+  }
+
+  .ratindAndHost {
+    display: flex;
+    justify-content: space-between;
+  }
+  .host {
+    display: flex;
+    justify-content: end;
+  }
+
+  .hostPic {
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
