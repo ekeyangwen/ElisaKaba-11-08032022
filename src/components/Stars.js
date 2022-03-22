@@ -3,66 +3,36 @@ import React, { useState } from "react";
 const Stars = ({ rating }) => {
   const greyStars = "../../../img/Vector-star-grey.png";
   const redStars = "../../../img/Vector-star.png";
-  const [imgSrc, setImgSrc] = useState(greyStars);
-  const starsValue = 5;
 
-  const Rates = () => {
-    if (rating <= starsValue) {
-      setImgSrc(redStars);
+  const ratingMax = 5;
+  const ratingCurrent = rating;
+  let ratingCollection = [];
+
+  const rates = () => {
+    console.log(ratingCurrent);
+    for (let i = 0; i < ratingMax; i++) {
+      console.log("For i=", i);
+      if (i < ratingCurrent) {
+        console.log("if");
+        ratingCollection.push(
+          <span key={i} className="oneStar">
+            <img className="image" src={redStars} alt="Etoile" index="1"></img>
+          </span>
+        );
+      } else {
+        console.log("Else");
+        ratingCollection.push(
+          <span key={i} className="oneStar">
+            <img className="image" src={greyStars} alt="Etoile" index="1"></img>
+          </span>
+        );
+      }
     }
+    console.log(ratingCollection);
+    return ratingCollection;
   };
 
-  return (
-    <div>
-      <>
-        <span className="oneStar">
-          <img
-            className="image"
-            src={imgSrc}
-            alt="Etoile"
-            index="1"
-            onClick={Rates}
-          ></img>
-        </span>
-        <span className="oneStar">
-          <img
-            className="image"
-            src={imgSrc}
-            alt="Etoile"
-            index="2"
-            onClick={Rates}
-          ></img>
-        </span>
-        <span className="oneStar">
-          <img
-            className="image"
-            src={imgSrc}
-            alt="Etoile"
-            index="3"
-            onClick={Rates}
-          ></img>
-        </span>
-        <span className="oneStar">
-          <img
-            className="image"
-            src={imgSrc}
-            alt="Etoile"
-            index="4"
-            onClick={Rates}
-          ></img>
-        </span>
-        <span className="oneStar">
-          <img
-            className="image"
-            src={imgSrc}
-            alt="Etoile"
-            index="5"
-            onClick={Rates}
-          ></img>
-        </span>
-      </>
-    </div>
-  );
+  return <div>{rates()}</div>;
 };
 
 export default Stars;
