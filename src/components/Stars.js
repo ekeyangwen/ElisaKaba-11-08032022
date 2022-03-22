@@ -1,51 +1,67 @@
-const Stars = ({ logement }) => {
+import React, { useState } from "react";
+
+const Stars = ({ rating }) => {
   const greyStars = "../../../img/Vector-star-grey.png";
   const redStars = "../../../img/Vector-star.png";
+  const [imgSrc, setImgSrc] = useState(greyStars);
   const starsValue = 5;
-  let i = logement;
 
-  console.log(i);
-  for (i = 1; i < starsValue; i++) {
-    console.log(i <= starsValue);
-    if (i <= starsValue) {
-      let image = document.querySelectorAll(".image");
-      image.forEach((img) => {
-        img.setAttribute("src", redStars);
-      });
+  const Rates = () => {
+    if (rating <= starsValue) {
+      setImgSrc(redStars);
     }
-  }
-  // const dataCompare = () => {
-  //   for (let i = 1; i < starsValue; i++) {
-  //     console.log(i);
-  //     if (i <= index) {
-  //       document.getElementById(i).setAttribute("src", redStars);
-  //     } else {
-  //       document.getElementById(i).setAttribute("src", greyStars);
-  //     }
-  //   }
-  // };
-
-  // dataCompare();
+  };
 
   return (
-    <>
-      <h1>{logement}</h1>
-      <span className="oneStar">
-        <img className="image" src={greyStars} alt="Etoile" index="1"></img>
-      </span>
-      <span className="oneStar">
-        <img className="image" src={greyStars} alt="Etoile" index="2"></img>
-      </span>
-      <span className="oneStar">
-        <img className="image" src={greyStars} alt="Etoile" index="3"></img>
-      </span>
-      <span className="oneStar">
-        <img className="image" src={greyStars} alt="Etoile" index="4"></img>
-      </span>
-      <span className="oneStar">
-        <img className="image" src={greyStars} alt="Etoile" index="5"></img>
-      </span>
-    </>
+    <div>
+      <>
+        <span className="oneStar">
+          <img
+            className="image"
+            src={imgSrc}
+            alt="Etoile"
+            index="1"
+            onClick={Rates}
+          ></img>
+        </span>
+        <span className="oneStar">
+          <img
+            className="image"
+            src={imgSrc}
+            alt="Etoile"
+            index="2"
+            onClick={Rates}
+          ></img>
+        </span>
+        <span className="oneStar">
+          <img
+            className="image"
+            src={imgSrc}
+            alt="Etoile"
+            index="3"
+            onClick={Rates}
+          ></img>
+        </span>
+        <span className="oneStar">
+          <img
+            className="image"
+            src={imgSrc}
+            alt="Etoile"
+            index="4"
+            onClick={Rates}
+          ></img>
+        </span>
+        <span className="oneStar">
+          <img
+            className="image"
+            src={imgSrc}
+            alt="Etoile"
+            index="5"
+            onClick={Rates}
+          ></img>
+        </span>
+      </>
+    </div>
   );
 };
 

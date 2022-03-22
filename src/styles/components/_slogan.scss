@@ -15,18 +15,9 @@
 
   .sloganText {
     height: 48px;
-    width: 61%;
+    width: 65%;
     padding: 20px;
-  }
-  @media screen and (min-width: 375px) {
-    .sloganText {
-      color: #fff;
-      font-family: Montserrat;
-      font-size: 24px;
-      font-style: normal;
-      line-height: 24px;
-      font-weight: 500;
-      letter-spacing: 0em;
-    }
+    color: #fff;
+    font-weight: 500;
   }
 }

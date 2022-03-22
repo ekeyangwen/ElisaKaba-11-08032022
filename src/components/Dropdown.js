@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const Dropdown = ({ logement }) => {
   const { description, equipments } = logement;
-
   const [isActive, setIsActive] = useState(false);
   const listeEquipement = equipments.map((equipement) => <li>{equipement}</li>);
   const onClick = () => setIsActive(!isActive);

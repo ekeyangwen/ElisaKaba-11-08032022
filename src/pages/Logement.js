@@ -3,9 +3,9 @@ import LogementGallery from "../components/LogementGallery";
 
 const Logement = () => {
   return (
-    <div className="ficheLogement">
+    <section className="ficheLogement">
       <LogementGallery />
-    </div>
+    </section>
   );
 };
 

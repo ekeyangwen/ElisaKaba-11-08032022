@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Stars from "./Stars";
 import Dropdown from "./Dropdown";
 import Carrousel from "./Carrousel";
+import Tags from "./Tags";
 
 const LogementGallery = () => {
   const { id } = useParams();
@@ -30,31 +31,38 @@ const LogementGallery = () => {
       {eachCard
         .filter((logement) => logement.id === id)
         .map((logement) => (
-          <div>
-            <div className="carousel">
+          <section className="logementContent">
+            <section className="carousel">
               <Carrousel pictures={logement.pictures} />
-            </div>
-            <div className="infoLogement">
-              <h1 className="title">{logement.title} </h1>
-              <p className="location">{logement.location}</p>
-              <section className="ratindAndHost">
-                <div key={id} className="ratingStars">
-                  <Stars logement={logement.rating} />
-                </div>
-                <div className="host">
-                  <p className="hostName">{logement.host.name}</p>
-                  <img
-                    className="hostPic"
-                    src={logement.host.picture}
-                    alt="L'hôte"
-                  ></img>
-                </div>
+            </section>
+            <>
+              {" "}
+              <section className="infoLogement">
+                <h1 className="title">{logement.title} </h1>
+                <p className="location">{logement.location}</p>
+                <span className="tags">
+                  <Tags tags={logement.tags} />
+                </span>
+                <section className="ratindAndHost">
+                  <div key={id} className="ratingStars">
+                    <Stars rating={logement.rating} />
+                  </div>
+                  <section className="host">
+                    <p className="hostName">{logement.host.name}</p>
+                    <img
+                      className="hostPic"
+                      src={logement.host.picture}
+                      alt="L'hôte"
+                    ></img>
+                  </section>
+                </section>
               </section>
-            </div>
-            <div key={id} className="dropdown">
+            </>
+
+            <section key={id} className="dropdown">
               <Dropdown logement={logement} />
-            </div>
-          </div>
+            </section>
+          </section>
         ))}
     </div>
   );
