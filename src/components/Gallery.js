@@ -25,7 +25,7 @@ const RecupData = () => {
     <div className="logement">
       {data &&
         data.length > 0 &&
-        data.map((logement) => <Cards key={logement.id} logement={logement} />)}
+        data.map((logement) => <Cards key={logement.id} card={logement} />)}
     </div>
   );
 };

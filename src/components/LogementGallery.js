@@ -60,7 +60,7 @@ const LogementGallery = () => {
             </>
 
             <section key={id} className="dropdown">
-              <Dropdown logement={logement} />
+              <Dropdown dropdown={logement} />
             </section>
           </section>
         ))}

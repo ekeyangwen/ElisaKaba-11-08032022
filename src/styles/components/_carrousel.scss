@@ -32,4 +32,17 @@
     margin-left: 0;
     margin-right: 32px;
   }
+
+  .photos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .imgNb {
+    margin-top: -36px;
+    z-index: 20;
+    color: #fff;
+    font-size: 18px;
+  }
 }

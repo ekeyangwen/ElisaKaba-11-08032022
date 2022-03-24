@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Cards = ({ logement }) => {
-  const { id, cover, title } = logement;
+const Cards = ({ card }) => {
+  const { id, cover, title } = card;
   const path = `/logement/${id}`;
   return (
     <div className="cards">

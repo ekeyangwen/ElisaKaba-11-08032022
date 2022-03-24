@@ -1,64 +1,70 @@
-.dropdown {
-  position: relative;
-}
-.dropContent {
-  height: 143.32472229003906px;
-  width: 335px;
-  left: 0px;
-  top: 24.17529296875px;
-  border-radius: 5px;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 17px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-bottom: 40px;
-}
+@media screen and (min-width: 375px) {
+  .dropdown {
+    position: relative;
+  }
+  .dropContent {
+    height: 143.32472229003906px;
+    width: 335px;
+    left: 0px;
+    top: 24.17529296875px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 40px;
+  }
 
-.titre {
-  font-family: Montserrat;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #ffffff;
-}
+  .titre {
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+  }
 
-.dropBtn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 29.931270599365234px;
-  width: 335px;
-  left: 0px;
-  top: 0px;
-  border-radius: 5px;
-  border: none;
-  background-color: #ff6060;
-}
-.menu {
-  background: #f6f6f6;
-  height: 143.32472229003906px;
-  width: 335px;
-  left: 0px;
-  top: 24.17529296875px;
-  border-radius: 5px;
-  visibility: hidden;
-}
+  .dropBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 29.931270599365234px;
+    width: 335px;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff6060;
+  }
+  .menu {
+    background: #f6f6f6;
+    height: 143.32472229003906px;
+    width: 335px;
+    left: 0px;
+    top: 24.17529296875px;
+    border-radius: 5px;
+    visibility: hidden;
+  }
 
-.menu.active {
-  opacity: 1;
-  visibility: visible;
-}
+  .menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
 
-.menu ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin-bottom: 20px;
-  margin: 0;
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-bottom: 20px;
+    margin: 0;
+  }
+
+  summary:first-of-type {
+    list-style: none;
+  }
 }

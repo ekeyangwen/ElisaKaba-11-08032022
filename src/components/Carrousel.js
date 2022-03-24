@@ -1,17 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Carrousel = ({ pictures }) => {
   const [current, setCurrent] = useState(0);
-  const length = pictures.length;
+  let length = pictures.length;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
   console.log(current);
+  console.log(length);
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
+  const SupprimerFleches = () => {
+    if (length <= 1) {
+      document.querySelector(".previousBtn").style.display = "none";
+      document.querySelector(".nextBtn").style.display = "none";
+    }
+  };
+  useEffect(() => {
+    SupprimerFleches();
+  }, []);
+
   if (!Array.isArray(pictures) || length <= 0) {
     return null;
   }
@@ -47,6 +58,9 @@ const Carrousel = ({ pictures }) => {
             </div>
           );
         })}
+        <p className="imgNb">
+          {current + 1}/{length}
+        </p>
       </div>
     </section>
   );

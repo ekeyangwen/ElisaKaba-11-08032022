@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const Dropdown = ({ logement }) => {
-  const { description, equipments } = logement;
+const Dropdown = ({ dropdown }) => {
+  const { description, equipments } = dropdown;
   const [isActive, setIsActive] = useState(false);
   const listeEquipement = equipments.map((equipement) => <li>{equipement}</li>);
   const onClick = () => setIsActive(!isActive);
@@ -10,7 +10,9 @@ const Dropdown = ({ logement }) => {
     <div className="dropdown">
       <section className="dropHeader">
         <button onClick={onClick} className="dropBtn">
-          <span className="titre">Description</span>
+          <details className="titre">
+            <summary>Description</summary>
+          </details>
 
           <img src="../../../img/Vector-bas.png" alt="Fleche bas" />
         </button>
@@ -21,7 +23,7 @@ const Dropdown = ({ logement }) => {
         </nav>
       </section>
 
-      <section className="dropHeader">
+      {/* <section className="dropHeader">
         <button onClick={onClick} className="dropBtn">
           <span className="titre">Equipements</span>
 
@@ -32,7 +34,7 @@ const Dropdown = ({ logement }) => {
         <nav className={`menu ${isActive ? "active" : "inactive"}`}>
           <ul className="equipement">{listeEquipement}</ul>
         </nav>
-      </section>
+      </section> */}
     </div>
   );
 };
