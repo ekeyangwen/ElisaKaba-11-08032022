@@ -7,7 +7,7 @@ const RecupData = () => {
   const [data, setData] = useState([]);
 
   const getData = () => {
-    fetch("data.json")
+    fetch("../../../data.json")
       .then(function (response) {
         console.log(response);
         return response.json();
