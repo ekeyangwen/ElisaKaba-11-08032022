@@ -1,26 +1,48 @@
 import React from "react";
-import data from "./DopdownData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const AboutContent = () => {
-  console.log(data);
+  const [data, setData] = useState([]);
   const [isActive, setIsActive] = useState(false);
+
   const onClick = () => setIsActive(!isActive);
+
+  const getDropdownData = () => {
+    fetch("../../../dropdownData.json")
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson);
+        setData(myJson);
+        console.log(data);
+      });
+  };
+
+  useEffect(() => {
+    getDropdownData();
+  }, []);
 
   return (
     <div className="about">
-      <button onClick={onClick} className="dropBtn">
-        <details className="titre">
-          <summary> {data[0].title} </summary>
-        </details>
-        <img src="../../../img/Vector-bas.png" alt="Fleche bas" />
-      </button>
-      <section className="dropContent">
-        {" "}
-        <nav className={`menu ${isActive ? "active" : "inactive"}`}>
-          <ul className="description">{data[0].content}</ul>{" "}
-        </nav>{" "}
-      </section>
+      {data.map((about) => (
+        <>
+          <button onClick={onClick} className="dropBtn">
+            <details className="titre">
+              <summary> {about.title} </summary>
+            </details>
+            <img src="../../../img/Vector-bas.png" alt="Fleche bas" />
+          </button>
+          <section className="dropContent">
+            {" "}
+            <nav className={`menu ${isActive ? "active" : "inactive"}`}>
+              <ul className="description">{about.content}</ul>{" "}
+            </nav>{" "}
+          </section>
+        </>
+      ))}
+      ;
     </div>
   );
 };
