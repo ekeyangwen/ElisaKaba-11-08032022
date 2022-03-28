@@ -2,6 +2,13 @@
   .dropdown {
     position: relative;
   }
+
+  details {
+    background-color: #ff6060;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+  }
   .dropContent {
     height: 143.32472229003906px;
     width: 335px;
@@ -18,7 +25,11 @@
     margin-bottom: 40px;
   }
 
-  .titre {
+  .aboutContent {
+    font-size: 12px;
+  }
+
+  .titleAbout {
     font-family: Montserrat;
     font-size: 13px;
     font-style: normal;
@@ -27,19 +38,12 @@
     letter-spacing: 0em;
     text-align: left;
     color: #ffffff;
+    background-color: #ff6060;
   }
 
-  .dropBtn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 29.931270599365234px;
-    width: 335px;
-    left: 0px;
-    top: 0px;
-    border-radius: 5px;
-    border: none;
+  .dropdownBtn {
     background-color: #ff6060;
+    border: none;
   }
   .menu {
     background: #f6f6f6;
@@ -64,6 +68,11 @@
     margin: 0;
   }
 
+  summary {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
   summary:first-of-type {
     list-style: none;
   }

@@ -1,42 +1,42 @@
-import React, { useState } from "react";
-import data from "./DopdownData";
+import React, { useState, useEffect } from "react";
 
-const Dropdown = ({ dropdown }) => {
-  console.log(data);
-  const { description } = dropdown;
-  const [isActive, setIsActive] = useState(false);
-  const onClick = () => setIsActive(!isActive);
+const Dropdown = () => {
+  const [data, setData] = useState([]);
+
+  const getDropdownData = () => {
+    fetch("../../../data.json")
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson);
+        setData(myJson);
+        console.log(data);
+      });
+  };
+
+  useEffect(() => {
+    getDropdownData();
+  }, []);
 
   return (
     <div className="dropdown">
-      <section className="dropHeader">
-        {" "}
-        <button onClick={onClick} className="dropBtn">
-          {" "}
-          <details className="titre">
-            <summary> Description </summary>{" "}
+      {data.map((about) => (
+        <>
+          <details>
+            <summary>
+              {" "}
+              <div className="titleAbout"> description</div>{" "}
+              <button className="dropdownBtn">
+                {" "}
+                <img src="../../../img/Vector-bas.png" alt="Fleche bas" />
+              </button>{" "}
+            </summary>
+            <p className="aboutContent">{about.equipment}</p>{" "}
           </details>
-          <img src="../../../img/Vector-bas.png" alt="Fleche bas" />{" "}
-        </button>{" "}
-      </section>{" "}
-      <section className="dropContent">
-        {" "}
-        <nav className={`menu ${isActive ? "active" : "inactive"}`}>
-          <ul className="description">{description}</ul>{" "}
-        </nav>{" "}
-      </section>
-      {/* <section className="dropHeader">
-        <button onClick={onClick} className="dropBtn">
-          <span className="titre">Equipements</span>
-
-          <img src="../../../img/Vector-bas.png" alt="Fleche bas" />
-        </button>
-      </section>
-      <section className="dropContent">
-        <nav className={`menu ${isActive ? "active" : "inactive"}`}>
-          <ul className="equipement">{listeEquipement}</ul>
-        </nav>
-      </section> */}
+        </>
+      ))}
     </div>
   );
 };
