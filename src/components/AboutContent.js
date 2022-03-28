@@ -3,9 +3,6 @@ import { useState, useEffect } from "react";
 
 const AboutContent = () => {
   const [data, setData] = useState([]);
-  // const [isActive, setIsActive] = useState(false);
-
-  // const onClick = () => setIsActive(!isActive);
 
   const getDropdownData = () => {
     fetch("../../../dropdownData.json")
@@ -39,12 +36,6 @@ const AboutContent = () => {
             </summary>
             <p className="aboutContent">{about.content}</p>{" "}
           </details>
-          {/* <section className="dropContent">
-            {" "}
-            <nav className={`menu ${isActive ? "active" : "inactive"}`}>
-              <ul className="description">/ul>{" "}
-            </nav>{" "}
-          </section> */}
         </>
       ))}
     </div>

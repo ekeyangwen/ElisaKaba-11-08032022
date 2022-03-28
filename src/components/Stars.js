@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Stars = ({ rating }) => {
   const greyStars = "../../../img/Vector-star-grey.png";
