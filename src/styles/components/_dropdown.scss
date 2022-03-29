@@ -9,21 +9,6 @@
     padding: 10px;
     margin: 10px;
   }
-  .dropContent {
-    height: 143.32472229003906px;
-    width: 335px;
-    left: 0px;
-    top: 24.17529296875px;
-    border-radius: 5px;
-    font-family: Montserrat;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 17px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-bottom: 40px;
-  }
 
   .aboutContent {
     font-size: 12px;
@@ -42,30 +27,13 @@
   }
 
   .dropdownBtn {
+    height: 14px;
+    width: 20px;
     background-color: #ff6060;
     border: none;
   }
-  .menu {
-    background: #f6f6f6;
-    height: 143.32472229003906px;
-    width: 335px;
-    left: 0px;
-    top: 24.17529296875px;
-    border-radius: 5px;
-    visibility: hidden;
-  }
-
-  .menu.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .menu ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin-bottom: 20px;
-    margin: 0;
+  details[open] .dropdownBtn {
+    transform: rotate(180deg);
   }
 
   summary {

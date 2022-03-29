@@ -1,42 +1,37 @@
-import React, { useState, useEffect } from "react";
-
-const Dropdown = () => {
-  const [data, setData] = useState([]);
-
-  const getDropdownData = () => {
-    fetch("../../../data.json")
-      .then(function (response) {
-        console.log(response);
-        return response.json();
-      })
-      .then(function (myJson) {
-        console.log(myJson);
-        setData(myJson);
-        console.log(data);
-      });
-  };
-
-  useEffect(() => {
-    getDropdownData();
-  }, []);
+const Dropdown = ({ title, content, list, id }) => {
+  // const [data, setData] = useState([]);
+  if (list) {
+    <ul key={id}>
+      {list.map((element) => (
+        <li>{element}</li>
+      ))}
+    </ul>;
+  }
 
   return (
     <div className="dropdown">
-      {data.map((about) => (
-        <>
-          <details>
-            <summary>
-              {" "}
-              <div className="titleAbout"> description</div>{" "}
-              <button className="dropdownBtn">
-                {" "}
-                <img src="../../../img/Vector-bas.png" alt="Fleche bas" />
-              </button>{" "}
-            </summary>
-            <p className="aboutContent">{about.equipment}</p>{" "}
-          </details>
-        </>
-      ))}
+      <>
+        <details>
+          <summary>
+            {" "}
+            <div className="titleAbout"> {title}</div>{" "}
+            <img
+              className="dropdownBtn"
+              src="../../../img/Vector-bas.png"
+              alt="Fleche bas"
+            />
+          </summary>
+          {list ? (
+            <ul>
+              {list.map((element) => (
+                <li>{element}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className="aboutContent">{content}</p>
+          )}
+        </details>
+      </>
     </div>
   );
 };

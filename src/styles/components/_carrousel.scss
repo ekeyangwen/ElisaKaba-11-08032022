@@ -1,15 +1,19 @@
 @media screen and (min-width: 375px) {
   .imgGallery,
   .slider {
-    position: relative;
-    border-radius: 10px;
-    width: 335px;
-    height: 255px;
-    object-fit: cover;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+    height: 255px;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-blend-mode: darken;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    width: 95%;
   }
   .commande {
     display: flex;

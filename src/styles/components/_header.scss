@@ -2,7 +2,6 @@
   .header {
     display: flex;
     justify-content: space-between;
-    width: 100%;
 
     .navigation {
       display: flex;
@@ -24,7 +23,7 @@
       position: relative;
     }
 
-    .active {
+    .itemNav.active {
       content: "";
       height: 1px;
       background-color: #ff6060;

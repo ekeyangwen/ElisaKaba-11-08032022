@@ -9,18 +9,14 @@ const Stars = ({ rating }) => {
   let ratingCollection = [];
 
   const rates = () => {
-    console.log(ratingCurrent);
     for (let i = 0; i < ratingMax; i++) {
-      console.log("For i=", i);
       if (i < ratingCurrent) {
-        console.log("if");
         ratingCollection.push(
           <span key={i} className="oneStar">
             <img className="image" src={redStars} alt="Etoile" index="1"></img>
           </span>
         );
       } else {
-        console.log("Else");
         ratingCollection.push(
           <span key={i} className="oneStar">
             <img className="image" src={greyStars} alt="Etoile" index="1"></img>
@@ -28,7 +24,6 @@ const Stars = ({ rating }) => {
         );
       }
     }
-    console.log(ratingCollection);
     return ratingCollection;
   };
 
