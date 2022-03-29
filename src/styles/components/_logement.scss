@@ -14,22 +14,37 @@
     display: flex;
     flex-direction: column;
   }
+  .logementContent {
+    display: flex;
+    flex-direction: column;
+  }
   .unLogement {
     margin-left: 20px;
   }
 
-  .ratindAndHost {
+  .infoFlat,
+  .eachTag {
+    width: 95%;
+    margin-left: 20px;
     display: flex;
-    justify-content: space-between;
-    height: 40px;
-    align-items: center;
-    margin-bottom: 25px;
+    flex-direction: column;
+    justify-content: center;
   }
+
+  .eachTag {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
   .host {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 30%;
+  }
+
+  .hostNameAndPicture {
+    display: flex;
   }
   .hostName {
     font-family: Montserrat;
@@ -39,6 +54,8 @@
     line-height: 17px;
     letter-spacing: 0em;
     text-align: right;
+    margin-right: 10px;
+    margin-top: 0px;
   }
 
   .hostPic {

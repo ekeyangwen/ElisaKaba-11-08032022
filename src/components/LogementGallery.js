@@ -37,7 +37,7 @@ const LogementGallery = () => {
         </section>
       )}{" "}
       {flat && (
-        <section className="infoflat">
+        <section className="infoFlat">
           <h1 className="title">{flat.title} </h1>
           <p className="location">{flat.location}</p>
         </section>
@@ -48,7 +48,7 @@ const LogementGallery = () => {
         </span>
       )}
       {flat && (
-        <section className="ratindAndHost">
+        <section className="ratingAndHost">
           <div className="ratingStars">
             <Stars rating={flat.rating} />
           </div>

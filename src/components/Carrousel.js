@@ -26,7 +26,7 @@ const Carrousel = ({ pictures }) => {
   }
 
   return (
-    <section className="slider">
+    <>
       <div className="commande">
         <button className="previousBtn" onClick={prevSlide}>
           <img
@@ -59,8 +59,8 @@ const Carrousel = ({ pictures }) => {
         <p className="imgNb">
           {current + 1}/{length}
         </p>
-      </div>
-    </section>
+      </div>{" "}
+    </>
   );
 };
 
