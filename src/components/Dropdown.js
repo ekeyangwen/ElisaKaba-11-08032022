@@ -22,9 +22,9 @@ const Dropdown = ({ title, content, list, id }) => {
             />
           </summary>
           {list ? (
-            <ul>
+            <ul className="listElements">
               {list.map((element) => (
-                <li>{element}</li>
+                <li className="element">{element}</li>
               ))}
             </ul>
           ) : (

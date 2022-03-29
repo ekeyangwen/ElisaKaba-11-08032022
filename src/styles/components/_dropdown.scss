@@ -4,18 +4,19 @@
   }
 
   details {
-    background-color: #ff6060;
     color: #ffffff;
     padding: 10px;
     margin: 10px;
+    background-color: #ffffff;
   }
 
   .aboutContent {
     font-size: 12px;
+    background-color: #f6f6f6;
+    margin: 0px;
   }
 
   .titleAbout {
-    font-family: Montserrat;
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
@@ -40,8 +41,25 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    background-color: #ff6060;
+    padding: 8px;
+    border-radius: 5px;
   }
   summary:first-of-type {
     list-style: none;
+  }
+
+  .listElements {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #f6f6f6;
+  }
+
+  .element,
+  .aboutContent {
+    font-size: 12px;
+    color: #ff6060;
+    padding: 8px;
   }
 }
