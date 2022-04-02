@@ -21,16 +21,13 @@
     width: 335px;
   }
 
-  .slide {
-    width: 335px;
-  }
   .commande {
     display: flex;
     position: absolute;
     justify-content: space-between;
     align-items: center;
     margin: 25px;
-    width: 70%;
+    width: 75%;
     height: 255px;
     z-index: 4;
   }
@@ -42,6 +39,11 @@
     border: none;
     z-index: 100;
     cursor: pointer;
+    height: 19.799999237060547px;
+    width: 11.670000076293945px;
+    left: 6.489990234375px;
+    top: 2.0999755859375px;
+    border-radius: 0px;
   }
   .photos {
     display: flex;
@@ -49,6 +51,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    width: 100%;
   }
   .imgNb {
     margin-top: -40px;

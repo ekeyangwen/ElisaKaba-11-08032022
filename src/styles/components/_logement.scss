@@ -8,7 +8,7 @@
   }
   .ficheLogement {
     display: flex;
-    margin-top: 20px;
+    align-items: center;
   }
   .logement {
     display: flex;
@@ -17,6 +17,8 @@
   .logementContent {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 20px;
   }
   .unLogement {
     margin-left: 20px;
@@ -45,6 +47,7 @@
 
   .hostNameAndPicture {
     display: flex;
+    width: 10%;
   }
   .hostName {
     font-family: Montserrat;

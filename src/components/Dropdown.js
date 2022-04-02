@@ -1,9 +1,8 @@
 const Dropdown = ({ title, content, list, id }) => {
-  // const [data, setData] = useState([]);
   if (list) {
-    <ul key={id}>
+    <ul>
       {list.map((element) => (
-        <li>{element}</li>
+        <li key={id}>{element}</li>
       ))}
     </ul>;
   }

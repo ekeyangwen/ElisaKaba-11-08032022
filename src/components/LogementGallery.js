@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import Stars from "./Stars";
@@ -10,8 +10,8 @@ import Host from "./Host";
 
 const LogementGallery = () => {
   const { id } = useParams();
-  // const [cards, setCards] = useState([]);
   const [flat, setFlat] = useState(undefined);
+  const [getFlatTemp, setGetFlatTemp] = useState();
 
   const getEachData = () => {
     fetch("../../../data.json")
@@ -20,8 +20,8 @@ const LogementGallery = () => {
       })
       .then(function (myJson) {
         let flatTemp = myJson.filter((logement) => logement.id === id);
+        setGetFlatTemp(flatTemp.length === 0);
         setFlat(flatTemp[0]);
-        console.log(flat);
       });
   };
 
@@ -31,11 +31,12 @@ const LogementGallery = () => {
 
   return (
     <div className="logementContent">
+      {getFlatTemp && <Navigate to="/NotFound" replace />}
       {flat && (
         <section className="carousel">
           <Carrousel pictures={flat.pictures} />
         </section>
-      )}{" "}
+      )}
       {flat && (
         <section className="infoFlat">
           <h1 className="title">{flat.title} </h1>
