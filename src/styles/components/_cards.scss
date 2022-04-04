@@ -4,31 +4,67 @@
     flex-direction: column;
     height: 255px;
     margin-bottom: 30px;
+  }
+  .cover {
+    width: 95%;
+    height: 255px;
+    margin: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
 
-    .cover {
-      width: 95%;
-      height: 255px;
-      margin: 10px;
-      border-radius: 10px;
-      object-fit: cover;
-      filter: brightness(0.7);
-    }
+  .title {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    margin-top: -75px;
+    margin-left: 10px;
+    padding-left: 20px;
+    white-space: normal;
+    width: 80%;
+    position: absolute;
+  }
+}
 
-    .title {
-      font-family: Montserrat;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 26px;
-      letter-spacing: 0em;
-      text-align: left;
-      color: #fff;
-      margin-top: -75px;
-      margin-left: 10px;
-      padding-left: 20px;
-      white-space: normal;
-      width: 80%;
-      position: absolute;
-    }
+@media screen and (min-width: 992px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .logement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 829px;
+    width: 95%;
+    border-radius: 25px;
+    background-color: #f6f6f6;
+  }
+  .cards {
+    height: 340px;
+    width: 33%;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .title {
+    width: 22%;
+    font-family: Montserrat;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding-left: 11px;
   }
 }

@@ -8,23 +8,18 @@
     color: #ffffff;
     padding: 5px;
     height: 18px;
-    width: 28%;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .tag {
     margin-left: 0px;
   }
+
   .listeTags {
     margin-bottom: 15px;
   }
 
   .eachTag {
-    width: 95%;
-    margin-left: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;

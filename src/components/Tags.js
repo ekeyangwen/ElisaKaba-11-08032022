@@ -8,9 +8,9 @@ const Tags = ({ tags, id }) => {
   ));
 
   return (
-    <div className="listeTags">
+    <span className="listeTags">
       <ul className="eachTag">{listeTags}</ul>
-    </div>
+    </span>
   );
 };
 

@@ -2,62 +2,56 @@
   .carousel {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    margin: 4px;
-  }
-  .imgGallery {
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 255px;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    background-blend-mode: darken;
-    border-radius: 10px;
-    margin: 10px;
-    margin-top: 20px;
-    width: 335px;
-  }
 
-  .commande {
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    align-items: center;
-    margin: 25px;
-    width: 75%;
-    height: 255px;
-    z-index: 4;
-  }
+    .imgGallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 255px;
+      background-position: center;
+      background-repeat: no-repeat;
+      object-fit: cover;
+      background-blend-mode: darken;
+      border-radius: 10px;
+      width: 100%;
+    }
+    .active {
+      width: 100%;
+    }
+    .commande {
+      display: flex;
+      position: absolute;
+      justify-content: space-between;
+      align-items: center;
+      width: 75%;
+      z-index: 4;
+    }
 
-  .previousBtn,
-  .nextBtn {
-    z-index: 10;
-    background-color: transparent;
-    border: none;
-    z-index: 100;
-    cursor: pointer;
-    height: 19.799999237060547px;
-    width: 11.670000076293945px;
-    left: 6.489990234375px;
-    top: 2.0999755859375px;
-    border-radius: 0px;
-  }
-  .photos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    width: 100%;
-  }
-  .imgNb {
-    margin-top: -40px;
-    z-index: 20;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
+    .previousBtn,
+    .nextBtn {
+      z-index: 10;
+      background-color: transparent;
+      border: none;
+      z-index: 100;
+      cursor: pointer;
+      padding: 0px;
+    }
+    .photos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      width: 100%;
+    }
+    .imgNb {
+      margin-top: -40px;
+      z-index: 20;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+    }
   }
 }

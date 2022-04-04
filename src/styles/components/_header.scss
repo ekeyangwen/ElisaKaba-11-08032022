@@ -2,29 +2,27 @@
   .header {
     display: flex;
     justify-content: space-between;
-    width: 95%;
     margin: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 
     .navigation {
       display: flex;
       flex-direction: row;
-      margin-right: 10px;
-      margin-top: 55px;
+      width: 50%;
+      justify-content: space-between;
+      margin-top: 65px;
     }
-
     ul {
       width: 100%;
-      justify-content: space-around;
-      margin-left: 39px;
+      justify-content: flex-end;
     }
     li {
-      margin-top: -15px;
+      margin-top: -20px;
     }
     .itemNav {
-      margin: 7px;
-      position: relative;
+      margin-left: 30px;
     }
-
     .itemNav.active {
       content: "";
       height: 1px;
