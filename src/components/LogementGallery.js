@@ -27,7 +27,7 @@ const LogementGallery = () => {
 
   useEffect(() => {
     getEachData();
-  }, []);
+  });
 
   return (
     <div className="logementContent">
