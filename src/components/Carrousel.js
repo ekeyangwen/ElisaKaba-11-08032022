@@ -19,7 +19,7 @@ const Carrousel = ({ pictures }) => {
   };
   useEffect(() => {
     SupprimerFleches();
-  }, []);
+  });
 
   if (!Array.isArray(pictures) || length <= 0) {
     return null;
