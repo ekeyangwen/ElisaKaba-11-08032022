@@ -10,54 +10,60 @@ import Host from "./Host";
 
 const LogementGallery = () => {
   const { id } = useParams();
-  const [flat, setFlat] = useState(undefined);
-  const [getFlatTemp, setGetFlatTemp] = useState();
+  const [flat, setFlat] = useState("");
 
-  const getEachData = () => {
-    fetch("../../../data.json")
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        let flatTemp = myJson.filter((logement) => logement.id === id);
-        setGetFlatTemp(flatTemp.length === 0);
-        setFlat(flatTemp[0]);
-      });
-  };
+  // const getEachData = () => {
+  //   fetch("../../../data.json")
+  //     .then(function (response) {
+  //       return response.json();
+  //     })
+  //     .then(function (myJson) {
+  //       let flatFind = myJson.find((logement) => logement.id === id);
+
+  //       setFlat(flatFind);
+  //     });
+  // };
 
   useEffect(() => {
-    getEachData();
-  });
+    fetch("../../../data.json")
+      .then((response) => response.json())
+      .then((myJson) => {
+        let flatFind = myJson.find((logement) => logement.id === id);
+        setFlat(flatFind);
+      });
+  }, []);
 
+  if (flat === undefined) {
+    return <Navigate to="*" />;
+  }
   return (
     <div className="logementContent">
-      {getFlatTemp && <Navigate to="/NotFound" replace />}
+      {/* {getFlatTemp && <Navigate to="/NotFound" replace />} */}
       {flat && (
         <section className="carousel">
           <Carrousel pictures={flat.pictures} />
         </section>
       )}
       {flat && (
-        <section className="infoFlat">
-          <h1 className="title">{flat.title} </h1>
-          <p className="location">{flat.location}</p>
-        </section>
-      )}
-      {flat && (
-        <span className="tags">
-          <Tags tags={flat.tags} />
-        </span>
-      )}
-      {flat && (
-        <section className="ratingAndHost">
-          <div className="ratingStars">
-            <Stars rating={flat.rating} />
-          </div>
-          <section className="host">
-            <Host host={flat.host} />
+        <section className="infos">
+          <section className="infoFlat">
+            <h1 className="titleFlat">{flat.title} </h1>
+            <p className="location">{flat.location}</p>
+            <span className="tags">
+              <Tags tags={flat.tags} />
+            </span>
           </section>
+          <section className="ratingAndHost">
+            <section className="ratingStars">
+              <Stars rating={flat.rating} />
+            </section>
+            <section className="host">
+              <Host host={flat.host} />
+            </section>
+          </section>{" "}
         </section>
       )}
+
       {flat && (
         <section className="dropdown">
           <Dropdown title="Description" content={flat.description} />

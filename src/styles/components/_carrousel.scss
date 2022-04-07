@@ -1,4 +1,7 @@
-@media screen and (min-width: 375px) {
+@import "../mixin";
+@import "../responsive";
+
+@media #{$litlescreen} {
   .carousel {
     display: flex;
     flex-direction: column;
@@ -7,51 +10,62 @@
 
     .imgGallery {
       display: flex;
-      justify-content: center;
-      align-items: center;
       height: 255px;
       background-position: center;
       background-repeat: no-repeat;
       object-fit: cover;
       background-blend-mode: darken;
       border-radius: 10px;
-      width: 100%;
+      width: 335px;
     }
-    .active {
-      width: 100%;
-    }
+
     .commande {
       display: flex;
       position: absolute;
       justify-content: space-between;
-      align-items: center;
-      width: 75%;
-      z-index: 4;
+      width: 80%;
     }
 
     .previousBtn,
     .nextBtn {
-      z-index: 10;
       background-color: transparent;
       border: none;
       z-index: 100;
       cursor: pointer;
-      padding: 0px;
     }
     .photos {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      z-index: 2;
-      width: 100%;
+
+      .imgNb {
+        @include generalFont;
+        margin-top: -40px;
+        color: #fff;
+        font-size: 14px;
+      }
     }
-    .imgNb {
-      margin-top: -40px;
-      z-index: 20;
-      color: #fff;
-      font-size: 14px;
-      font-weight: bold;
-    }
+  }
+}
+@media screen and (min-width: 576px) {
+  .commande {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .commande {
+    width: 80%;
+  }
+  .previousBtn,
+  .nextBtn {
+    height: 79.19999694824219px;
+    width: 46.68000030517578px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+  }
+  .prev,
+  .next {
+    height: 50%;
   }
 }

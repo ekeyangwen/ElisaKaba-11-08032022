@@ -1,0 +1,39 @@
+@import "../responsive";
+@import "../mixin";
+
+@media #{$litlescreen} {
+  .ratingAndHost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+
+    .host {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 30%;
+    }
+
+    .hostNameAndPicture {
+      display: flex;
+    }
+    .hostName {
+      @include generalFont;
+      text-align: right;
+      margin-right: 10px;
+      margin-top: 0px;
+    }
+
+    .hostPic {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}

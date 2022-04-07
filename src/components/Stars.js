@@ -27,7 +27,7 @@ const Stars = ({ rating }) => {
     return ratingCollection;
   };
 
-  return <div>{rates()}</div>;
+  return <div className="stars">{rates()}</div>;
 };
 
 export default Stars;

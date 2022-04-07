@@ -1,21 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
-
-$font: "Montserrat", sans-serif;
+@import "responsive.scss";
+@import "mixin.scss";
 
 $majorRed: #ff6060;
 $lighGrey: #f6f6f6;
 $darkGrey: #c4c4c4;
+$backgroundwhite: #ffffff;
+$font: "Montserrat", sans-serif;
 
-@media screen and (min-width: 375px) {
+@media #{$litlescreen} {
   body {
-    height: 100vh;
     margin: auto;
-    font-family: $font;
-    color: $majorRed;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
   }
+
   ul {
     display: flex;
     margin: 0;
@@ -27,7 +24,7 @@ $darkGrey: #c4c4c4;
   }
 
   a {
-    color: #ff6060;
+    color: $majorRed;
     text-decoration: none;
   }
 

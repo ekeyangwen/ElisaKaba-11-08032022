@@ -1,14 +1,14 @@
 const Dropdown = ({ title, content, list, id }) => {
-  if (list) {
-    <ul>
-      {list.map((element) => (
-        <li key={id}>{element}</li>
-      ))}
-    </ul>;
-  }
+  // if (list) {
+  //   <ul>
+  //     {list.map((element) => (
+  //       <li key={id}>{element}</li>
+  //     ))}
+  //   </ul>;
+  // }
 
   return (
-    <div className="dropdown">
+    <div className="dropdownList">
       <>
         <details>
           <summary>
@@ -22,8 +22,10 @@ const Dropdown = ({ title, content, list, id }) => {
           </summary>
           {list ? (
             <ul className="listElements">
-              {list.map((element) => (
-                <li className="element">{element}</li>
+              {list.map((element, id) => (
+                <li key={id} className="element">
+                  {element}
+                </li>
               ))}
             </ul>
           ) : (

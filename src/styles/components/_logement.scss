@@ -1,145 +1,74 @@
-@media screen and (min-width: 375px) {
-  .title {
-    font-size: 18px;
-  }
+@import "../responsive";
+@import "../mixin";
 
-  .location {
-    font-size: 14px;
-  }
-  .ficheLogement {
-    display: flex;
-    align-items: center;
-  }
-  .logement {
+@media #{$litlescreen} {
+  .infos {
     display: flex;
     flex-direction: column;
-  }
-  .logementContent {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 50px;
-    margin-top: 0px;
-  }
-  .unLogement {
-    margin-left: 20px;
-  }
+    margin: 22px;
 
-  .infoFlat {
-    width: 95%;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-  }
+    .infoFlat {
+      display: flex;
+      flex-direction: column;
 
-  .infoFlat {
-    margin-left: 0px;
-  }
-
-  .eachTag {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .host {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 30%;
-  }
-
-  .hostNameAndPicture {
-    display: flex;
-  }
-  .hostName {
-    font-family: Montserrat;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 17px;
-    letter-spacing: 0em;
-    text-align: right;
-    margin-right: 10px;
-    margin-top: 0px;
-  }
-
-  .hostPic {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .cards {
-    display: flex;
-    flex-direction: column;
-    height: 255px;
-    margin-bottom: 30px;
-  }
-  .cover {
-    width: 95%;
-    height: 255px;
-    margin: 10px;
-    border-radius: 10px;
-    object-fit: cover;
-    filter: brightness(0.7);
-  }
-
-  .title {
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 26px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #ff6060;
-    width: 80%;
-  }
-  .image {
-    margin: 4px;
+      .titleFlat {
+        @include generalFont;
+        font-size: 18px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .location,
+      .tags {
+        @include generalFont;
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+    }
   }
 }
-@media screen and (min-width: 992px) {
-  .home {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-  .logement {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100%;
-    width: 95%;
-    margin-bottom: 50px;
-    border-radius: 25px;
-    background-color: #f6f6f6;
-  }
-  .cards {
-    height: 340px;
-    width: 33%;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .title {
-    width: 22%;
-    font-family: Montserrat;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 16px;
-    font-weight: 500;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: left;
-    padding-left: 11px;
-  }
+// @media screen and (min-width: 992px) {
+//   .home {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     align-items: center;
+//   }
+//   .logement {
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     height: 100%;
+//     width: 95%;
+//     margin-bottom: 50px;
+//     border-radius: 25px;
+//     background-color: #f6f6f6;
+//   }
+//   .cards {
+//     height: 340px;
+//     width: 33%;
+//     border-radius: 10px;
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+//   .titleFlat {
+//     width: 22%;
+//     font-family: Montserrat;
+//     display: flex;
+//     flex-wrap: wrap;
+//     font-size: 16px;
+//     font-weight: 500;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     text-align: left;
+//   }
 
-  .sloganText {
-    text-align: center;
-  }
-  .slogan {
-    justify-content: center;
-  }
-}
+//   .sloganText {
+//     text-align: center;
+//   }
+//   .slogan {
+//     justify-content: center;
+//   }
+//   .titleCards {
+//     width: 25%;
+//   }
+// }

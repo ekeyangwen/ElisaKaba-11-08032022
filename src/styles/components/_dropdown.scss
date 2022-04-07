@@ -1,49 +1,50 @@
-@media screen and (min-width: 375px) {
-  details {
-    color: #ffffff;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-  }
-
-  .aboutContent {
-    font-size: 12px;
-    background-color: #f6f6f6;
-    margin: 0px;
-  }
-
-  .titleAbout {
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #ffffff;
-    background-color: #ff6060;
-  }
-
-  .dropdownBtn {
-    height: 14px;
-    width: 20px;
-    background-color: #ff6060;
-    border: none;
-  }
-  details[open] .dropdownBtn {
-    transform: rotate(180deg);
-  }
-
-  summary {
+@media #{$litlescreen} {
+  .dropdown {
     display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    background-color: #ff6060;
-    padding: 8px;
-    border-radius: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  summary:first-of-type {
-    list-style: none;
+    flex-direction: column;
+    margin: 22px;
+
+    details {
+      color: #ffffff;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+    }
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      background-color: #ff6060;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    .dropdownBtn {
+      height: 14px;
+      width: 20px;
+      background-color: #ff6060;
+      border: none;
+    }
+    details[open] .dropdownBtn {
+      transform: rotate(180deg);
+    }
+
+    summary:first-of-type {
+      list-style: none;
+    }
+
+    .titleAbout {
+      @include generalFont;
+      font-size: 13px;
+      color: #ffffff;
+      background-color: #ff6060;
+    }
+    .aboutContent,
+    .listElements {
+      @include generalFont;
+      font-size: 12px;
+      background-color: #f6f6f6;
+      margin: 0px;
+    }
   }
 
   .listElements {
@@ -51,6 +52,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     background-color: #f6f6f6;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .element,
@@ -58,5 +61,23 @@
     font-size: 12px;
     color: #ff6060;
     padding: 8px;
+  }
+  .aboutContent {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .dropdownList {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+  }
+
+  .summary {
+    width: 50%;
+  }
+  .aboutContent {
+    width: 100%;
   }
 }

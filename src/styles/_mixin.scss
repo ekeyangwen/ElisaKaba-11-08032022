@@ -1,0 +1,11 @@
+@mixin generalFont {
+  font-style: normal;
+  font-weight: 500;
+  font-family: $font;
+  color: $majorRed;
+}
+
+@mixin itemActive {
+  content: "";
+  height: 1px;
+}

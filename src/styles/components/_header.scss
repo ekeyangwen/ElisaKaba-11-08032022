@@ -1,41 +1,34 @@
-@media screen and (min-width: 375px) {
+@import "../mixin";
+@import "../responsive";
+
+@media #{$litlescreen} {
   .header {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 22px;
 
     .navigation {
       display: flex;
       flex-direction: row;
-      width: 50%;
       justify-content: space-between;
-      margin-top: 65px;
+      margin-top: 43px;
     }
     ul {
-      width: 100%;
       justify-content: flex-end;
     }
-    li {
-      margin-top: -20px;
-    }
+
     .itemNav {
-      margin-left: 30px;
+      margin-left: 7px;
+      margin-top: 30px;
     }
     .itemNav.active {
       content: "";
       height: 1px;
-      background-color: #ff6060;
-    }
-
-    .page {
-      margin-top: 20px;
+      background-color: $majorRed;
     }
 
     .logo {
       height: 47px;
-      width: 145px;
       margin-left: 10px;
       margin-top: 30px;
       border-radius: 0px;
@@ -43,10 +36,12 @@
 
     .accueil,
     .propos {
-      font-family: Montserrat;
+      @include generalFont;
       font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
+      margin-top: -16px;
+    }
+    .propos {
+      margin-top: -15px;
     }
   }
 }
