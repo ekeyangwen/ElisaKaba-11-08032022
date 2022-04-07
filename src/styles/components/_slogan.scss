@@ -23,3 +23,11 @@
     }
   }
 }
+@media #{$mediumscreen} {
+  .slogan {
+    .sloganText {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
