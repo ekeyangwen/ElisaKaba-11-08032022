@@ -7,16 +7,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 15px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-top: 15px;
 
     .host {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      width: 30%;
     }
 
     .hostNameAndPicture {

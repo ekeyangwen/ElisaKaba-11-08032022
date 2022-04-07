@@ -2,6 +2,10 @@
 @import "../mixin";
 
 @media #{$litlescreen} {
+  .logementContent {
+    display: flex;
+    flex-direction: column;
+  }
   .infos {
     display: flex;
     flex-direction: column;
@@ -26,49 +30,37 @@
     }
   }
 }
-// @media screen and (min-width: 992px) {
-//   .home {
-//     display: flex;
-//     flex-direction: column;
-//     width: 100%;
-//     align-items: center;
-//   }
-//   .logement {
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     height: 100%;
-//     width: 95%;
-//     margin-bottom: 50px;
-//     border-radius: 25px;
-//     background-color: #f6f6f6;
-//   }
-//   .cards {
-//     height: 340px;
-//     width: 33%;
-//     border-radius: 10px;
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
-//   .titleFlat {
-//     width: 22%;
-//     font-family: Montserrat;
-//     display: flex;
-//     flex-wrap: wrap;
-//     font-size: 16px;
-//     font-weight: 500;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     text-align: left;
-//   }
 
-//   .sloganText {
-//     text-align: center;
-//   }
-//   .slogan {
-//     justify-content: center;
-//   }
-//   .titleCards {
-//     width: 25%;
-//   }
-// }
+@media #{$mediumscreen} {
+  .infos {
+    margin: 0;
+  }
+  .logementContent {
+    margin: 50px;
+    .dropdown {
+      margin: 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .dropdownList {
+      width: 45%;
+      display: flex;
+      justify-content: space-between;
+    }
+    details {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  .infos {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .ratingAndHost {
+      flex-direction: column-reverse;
+      justify-content: start;
+      align-items: start;
+    }
+  }
+}

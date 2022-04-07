@@ -35,7 +35,7 @@ const About = () => {
   return (
     <div className="about">
       <section className="imgAbout"></section>
-      <section className="contentAbout">
+      <section className="dropdown">
         <Dropdown title={data[0].title} content={data[0].content} />
         <Dropdown title={data[1].title} content={data[1].content} />
         <Dropdown title={data[2].title} content={data[2].content} />

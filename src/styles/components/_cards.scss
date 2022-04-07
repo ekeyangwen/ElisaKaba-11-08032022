@@ -36,6 +36,31 @@
   }
 }
 
+@media #{$mediumscreen} {
+  .logement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .cards {
+      width: 33%;
+    }
+
+    .titleCards {
+      width: 21%;
+      font-family: Montserrat;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 16px;
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+      padding-left: 11px;
+    }
+  }
+}
+
 // @media screen and (min-width: 992px) {
 //   .home {
 //     display: flex;

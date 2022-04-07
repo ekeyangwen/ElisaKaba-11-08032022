@@ -1,5 +1,7 @@
 @media screen and (min-width: 375px) {
   .about {
+    display: flex;
+    flex-direction: column;
     .imgAbout {
       display: flex;
       background-image: url("../../../public/img/backgoundAbout.png");
@@ -12,18 +14,17 @@
       margin: 22px;
       margin-top: 20px;
     }
-    .itemNav.active {
-      width: 44%;
-    }
   }
 }
-@media screen and (min-width: 990px) {
-  .dropdown {
-    width: 50%;
-  }
 
-  .contentAbout {
-    display: flex;
-    flex-wrap: wrap;
+@media #{$mediumscreen} {
+  .about {
+    margin: 50px;
+    margin-top: inherit;
+
+    .dropdown {
+      margin-left: 80px;
+      margin-right: 80px;
+    }
   }
 }

@@ -1,4 +1,7 @@
-@media screen and (min-width: 375px) {
+@import "../responsive";
+@import "../mixin";
+
+@media #{$litlescreen} {
   .tag {
     font-size: 10px;
     line-height: 14px;
@@ -25,5 +28,11 @@
     justify-content: center;
     flex-direction: row;
     justify-content: flex-start;
+  }
+}
+@media #{$mediumscreen} {
+  .eachTag {
+    margin: 30px;
+    margin-left: 0;
   }
 }

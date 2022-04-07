@@ -7,7 +7,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 22px;
 
+    .slide {
+      display: flex;
+    }
     .imgGallery {
       display: flex;
       height: 255px;
@@ -18,7 +22,12 @@
       border-radius: 10px;
       width: 335px;
     }
-
+    .slide,
+    .slide:active,
+    .photos,
+    .imgGallery {
+      width: 100%;
+    }
     .commande {
       display: flex;
       position: absolute;
@@ -30,7 +39,6 @@
     .nextBtn {
       background-color: transparent;
       border: none;
-      z-index: 100;
       cursor: pointer;
     }
     .photos {
@@ -45,27 +53,5 @@
         font-size: 14px;
       }
     }
-  }
-}
-@media screen and (min-width: 576px) {
-  .commande {
-    width: 75%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .commande {
-    width: 80%;
-  }
-  .previousBtn,
-  .nextBtn {
-    height: 79.19999694824219px;
-    width: 46.68000030517578px;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-  }
-  .prev,
-  .next {
-    height: 50%;
   }
 }

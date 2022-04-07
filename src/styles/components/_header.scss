@@ -45,3 +45,9 @@
     }
   }
 }
+
+@media #{$mediumscreen} {
+  .header {
+    margin: 50px;
+  }
+}
