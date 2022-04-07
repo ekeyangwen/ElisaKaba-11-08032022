@@ -12,18 +12,6 @@ const LogementGallery = () => {
   const { id } = useParams();
   const [flat, setFlat] = useState("");
 
-  // const getEachData = () => {
-  //   fetch("../../../data.json")
-  //     .then(function (response) {
-  //       return response.json();
-  //     })
-  //     .then(function (myJson) {
-  //       let flatFind = myJson.find((logement) => logement.id === id);
-
-  //       setFlat(flatFind);
-  //     });
-  // };
-
   useEffect(() => {
     fetch("../../../data.json")
       .then((response) => response.json())
@@ -31,7 +19,7 @@ const LogementGallery = () => {
         let flatFind = myJson.find((logement) => logement.id === id);
         setFlat(flatFind);
       });
-  }, []);
+  });
 
   if (flat === undefined) {
     return <Navigate to="*" />;
