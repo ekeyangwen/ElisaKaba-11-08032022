@@ -1,12 +1,9 @@
 @media screen and (min-width: 375px) {
   .notFound {
     p {
-      font-family: Montserrat;
+      color: #f60;
       font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 26px;
-      letter-spacing: 0em;
+      @include generalFont;
       text-align: center;
       padding: 20px;
       padding-top: 0px;
@@ -26,12 +23,10 @@
     }
 
     .E404 {
+      color: $majorRed;
       font-family: Montserrat;
       font-size: 96px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 137px;
-      letter-spacing: 0em;
+      @include generalFont;
       text-align: center;
       margin-bottom: 0px;
     }

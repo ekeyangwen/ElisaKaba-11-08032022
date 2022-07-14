@@ -19,14 +19,13 @@ const LogementGallery = () => {
         let flatFind = myJson.find((logement) => logement.id === id);
         setFlat(flatFind);
       });
-  });
+  }, [id]);
 
   if (flat === undefined) {
     return <Navigate to="*" />;
   }
   return (
     <div className="logementContent">
-      {/* {getFlatTemp && <Navigate to="/NotFound" replace />} */}
       {flat && (
         <section className="carousel">
           <Carrousel pictures={flat.pictures} />

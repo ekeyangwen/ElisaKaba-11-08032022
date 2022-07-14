@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 const Cards = ({ card }) => {
   const { id, cover, title } = card;
   const path = `/logement/${id}`;
+
   return (
     <div className="cards">
       <NavLink to={path} className="getLogement">

@@ -1,11 +1,5 @@
 const Dropdown = ({ title, content, list, id }) => {
-  // if (list) {
-  //   <ul>
-  //     {list.map((element) => (
-  //       <li key={id}>{element}</li>
-  //     ))}
-  //   </ul>;
-  // }
+
 
   return (
     <div className="dropdownList">
